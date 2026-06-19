@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-ivory text-dark font-sans;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  /* Wedding serif headings */
+  .heading-display {
+    @apply font-serif font-light tracking-tight;
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    line-height: 1.05;
+  }
+
+  .heading-section {
+    @apply font-serif font-light;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+  }
+
+  .heading-card {
+    @apply font-serif font-normal text-2xl;
+    line-height: 1.2;
+  }
+
+  /* Label / overline style */
+  .label-overline {
+    @apply uppercase tracking-[0.25em] text-[0.6rem] font-sans font-medium;
+  }
+
+  /* Wedding card */
+  .card-wedding {
+    @apply rounded-2xl bg-white border border-champagne p-6 shadow-sm;
+  }
+
+  .card-glass {
+    @apply rounded-2xl p-6;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full text-xs uppercase tracking-[0.2em] font-sans font-medium transition-opacity hover:opacity-80 bg-dark text-ivory;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full text-xs uppercase tracking-[0.2em] font-sans font-medium transition-opacity hover:opacity-80 bg-sand text-white;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full text-xs uppercase tracking-[0.2em] font-sans font-medium transition-all hover:opacity-70;
+    border: 1px solid rgba(253, 248, 240, 0.6);
+    color: #fdf8f0;
+  }
+
+  /* Section padding */
+  .section-pad {
+    @apply py-20 px-6 md:py-28 md:px-8;
+  }
+
+  .container-wedding {
+    @apply max-w-6xl mx-auto;
+  }
+
+  /* Divider */
+  .divider-gold {
+    @apply h-px bg-sand opacity-40;
+  }
+}
